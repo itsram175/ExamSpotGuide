@@ -107,6 +107,15 @@
         </div>
 
     </section>
+
+    <div class="messageSentPopUp" id="msgPopUp">
+
+        <div class="msgCard">
+            <h3 id="messageText">Your Message Has been sent</h3>
+        </div>
+
+    </div>
+
     <footer>
         <div class="footerContent">
             <div class="contactInfoFooter">
@@ -152,26 +161,16 @@
 
 
     <script>
-
-
-
-        let contactForm = document.querySelector("#contactForm");
-        let msgPopUp = document.querySelector("#msgPopUp");
-        let messageText = document.querySelector("#messageText");
-
         // Contact Form Handles
+        let contactForm = document.querySelector("#contactForm");
+        
         let nameCF = document.querySelector("#nameCF");
         let emailCF = document.querySelector("#emailCF");
         let subjectCF = document.querySelector("#subjectCF");
         let textAreaCF = document.querySelector("#textAreaCF");
         let sendButton = document.querySelector("#sendButton");
 
-
-
         let centersListCardsContainer = document.querySelector("#centersListCardsContainer");
-
-
-
 
         function toggleMenu() {
             const menu_Toggle = document.querySelector(".menu_Toggle");
@@ -203,6 +202,7 @@
         }
 
     </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
