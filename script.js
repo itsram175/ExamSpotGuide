@@ -102,7 +102,7 @@ function searchList(input) {
     });
 
 
-    console.log(filteredArray)
+    
 }
 
 function selectCenter(value) {
