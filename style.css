@@ -1,0 +1,1640 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --lightBackground: #F4F6FB;
+    --darkBackground: #111;
+    --white: #FFFAFA;
+    --black: #111;
+    --blue: #031273;
+    --darkBlue: #060b2f;
+
+    --textSpanColor: #ff4000;
+    --hoverColor: #ff4000;
+
+    --lightBlueShade: rgb(220, 237, 251);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 1000px;
+    background-color: var(--lightBackground);
+}
+
+p {
+    font-weight: 300;
+    color: var(--black);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+header .logo {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+header .logo span {
+    color: var(--textSpanColor);
+}
+
+header .navigation_Bar {
+    position: relative;
+    display: flex;
+}
+
+header .navigation_Bar li {
+    list-style-type: none;
+    margin-left: 30px;
+}
+
+header .navigation_Bar li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.menu_Toggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-image: url(images/Icons/menuIcon.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    display: none;
+}
+
+.sticky {
+    background-color: var(--white);
+    padding: 10px 100px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.sticky .logo {
+    color: var(--textSpanColor);
+}
+
+
+.sticky .logo span {
+    color: var(--black);
+}
+
+.sticky .navigation_Bar li a {
+    color: var(--black);
+}
+
+header .navigation_Bar li a:hover {
+    color: var(--textSpanColor);
+}
+
+header .navigation_Bar li .activeLink {
+    color: var(--textSpanColor);
+}
+
+.sticky .navigation_Bar li .activeLink {
+    color: var(--textSpanColor);
+}
+
+section {
+    padding: 100px;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(images/mainBG.jpg);
+    background-size: cover;
+}
+
+.banner .content {
+    max-width: 900px;
+    text-align: center;
+}
+
+.banner .content h2 {
+    font-size: 4.5em;
+    color: var(--white);
+}
+
+.banner .content p {
+    font-size: 1em;
+    color: #fff;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.banner .content .search_Container {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    border-radius: 10px;
+}
+
+.banner .content .search_Container input {
+    border: none;
+    /* background-color: transparent; */
+    height: 100%;
+    width: 70%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding-left: 10px;
+    font-size: 1em;
+}
+
+.banner .content .search_Container button {
+    margin: 0;
+    height: 100%;
+    width: 30%;
+    border: none;
+    background-color: var(--textSpanColor);
+    cursor: pointer;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: 1em;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.banner .content .search_Container button:hover {
+    background-color: var(--hoverColor);
+}
+
+.searchList {
+    width: 70%;
+    margin: auto;
+    margin-top: 5px;
+    border-radius: 10px;
+
+    display: none;
+}
+
+.searchList ul {
+    position: absolute;
+    list-style-type: none;
+    border-radius: 10px;
+    background-color: var(--white);
+    border-radius: 10px;
+    width: 26%;
+    min-height: 80px;
+    max-height: 230px;
+    overflow-y: scroll;
+}
+
+.searchList ul::-webkit-scrollbar {
+    display: none;
+}
+
+.searchList ul li {
+    padding: 10px 0px;
+    border-bottom: solid 2px gray;
+    width: 90%;
+    margin: auto;
+    cursor: pointer;
+}
+
+.searchList ul li span {
+    display: block;
+}
+
+.searchList ul li span:nth-child(1) {
+    font-weight: bold;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#search_Button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 15px 35px;
+}
+
+.searchList ul li span:nth-child(2) {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+.title_Text {
+    color: var(--black);
+    font-size: 2em;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+}
+
+.cards_Container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 50px;
+}
+
+
+.card {
+    width: 325px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+}
+
+.card img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#centers .cards_Container .card img {
+    height: 200px;
+}
+
+.card_Content {
+    padding: 10px 15px;
+}
+
+.card_Content h1 {
+    font-size: 22px;
+    margin-top: -5px;
+}
+
+.card_Content p {
+    font-size: 14px;
+    color: #111;
+    font-weight: 400;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.card_button {
+    display: inline-block;
+    background-color: var(--textSpanColor);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+}
+
+.card_button:hover {
+    background-color: var(--hoverColor);
+}
+
+.more_btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+.about {
+    background-color: var(--darkBlue);
+    padding-bottom: 215px;
+}
+
+.about .title_Text {
+    color: var(--white);
+}
+
+.about p {
+    color: var(--white);
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+.title_Text {
+    margin-bottom: 20px;
+}
+
+.row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    text-align: justify;
+}
+
+.row .col50 {
+    position: relative;
+    width: 49%;
+}
+
+
+.title_Text span {
+    color: var(--textSpanColor);
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+#about .row .col50 img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+
+}
+
+.contact {
+    background-color: var(--darkBlue);
+}
+
+.contact .contactContent {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: rgb(220, 237, 251);
+    gap: 20px;
+    border-radius: 15px;
+    /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); */
+
+}
+
+.contactFormPart {
+    background-color: white;
+    width: 50%;
+    padding: 10px 0px;
+    padding-bottom: 40px;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    padding-top: 20px;
+}
+
+.contactInfoPart {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding-top: 35px;
+    /* background-color: #031273; */
+}
+
+.contactInfoPart img {
+    width: 50px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.contactInfoPart .contactInfoItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contactFormPart .CI_Text {
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.CI_Text {
+    font-size: 1.6em;
+    padding: 0;
+    margin-top: -15px;
+    text-align: center;
+    width: 100%;
+}
+
+
+.contact .contact_Form {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.white_Title {
+    color: white;
+    /* margin-top: -10px; */
+}
+
+.subTitle {
+    font-weight: bold;
+    font-size: 1.7em;
+}
+
+.contact .contact_Form form {
+    width: 100%;
+    margin-top: -20px;
+}
+
+.contactInfoSocialMediaIcons {
+    margin: auto;
+    padding-top: 60px;
+}
+
+.contactInfoSocialMediaIcons img {
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 0.2s;
+}
+
+.contactInfoSocialMediaIcons img:hover {
+    transform: translateY(-5px);
+}
+
+.contactInfoSocialMediaIcons p {
+    text-align: center;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.contact .contact_Form .row_100 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .contact_Form .row_100 .input100 {
+    width: 100%;
+    margin: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact .contact_Form .row_100 input,
+.contact .contact_Form .row_100 textarea {
+    position: relative;
+    border: none;
+    border-bottom: 1px solid var(--black);
+    color: var(--black);
+    background-color: transparent;
+    width: 100%;
+    padding-top: 10px 0px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 20px 0px;
+    resize: none;
+}
+
+.contact .contact_Form .row_100 textarea {
+    height: 100px;
+}
+
+.contact .contact_Form .row_100 input::placeholder,
+.contact .contact_Form .row_100 textarea::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+}
+
+.contact .contact_Form .row_100 .submitBtn {
+    background-color: var(--textSpanColor);
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight: 500;
+    border: none;
+    width: 50%;
+    padding: 10px 0px;
+    font-size: 18px;
+    margin-top: 0;
+    transition: 0.4s;
+    text-align: center;
+}
+
+
+.messageSentPopUp {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    margin-top: 100px;
+    margin-top: -100px;
+    transition-duration: 0.5s;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    /* display: none; */
+}
+
+.msgCard {
+    background-color: greenyellow;
+    text-align: center;
+    padding: 10px;
+    height: fit-content;
+    width: 30%;
+    border-radius: 10px;
+    color: white;
+    /* box-shadow: 0px 0px 5px black; */
+}
+
+#team {
+    padding-bottom: 180px;
+}
+
+.team_Cards .card {
+    width: 280px;
+    padding: 5px;
+    border-radius: 0px;
+}
+
+.team_Cards .card .teamImage {
+    height: 200px;
+    object-fit: cover;
+}
+
+.team_Cards .card .card_Content h1 {
+    text-align: center;
+    margin-top: -10px;
+    letter-spacing: 2px;
+    /* text-transform: uppercase; */
+}
+
+.team_Cards .card .card_Content p {
+    text-align: center;
+    margin-top: -5px;
+}
+
+.socialMediaIcons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+}
+
+.socialMediaIcons img {
+    width: 35px;
+    cursor: pointer;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.socialMediaIcons img:hover {
+    transform: translateY(-5px);
+}
+
+
+
+
+.overViewContent {
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    /* gap: 10px; */
+    width: 100%;
+    background-color: white;
+}
+
+.overViewContent .leftPart {
+    width: 49%;
+    height: 100%;
+}
+
+.overViewContent .rightPart {
+    width: 49%;
+    padding: 0px 10px;
+}
+
+.icon_Text_Container {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.overViewContent .rightPart h2 {
+    text-align: center;
+    width: 100%;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    /* background-color: var(--textSpanColor); */
+}
+
+.icon_Text {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.icon_Text img {
+    height: 50px;
+    width: auto;
+}
+
+.icon_Text .text {
+    padding-left: 15px;
+
+}
+
+.icon_Text .text p {
+    font-size: 16px;
+}
+
+.icon_Text .text p:nth-child(1) {
+    font-weight: bold;
+}
+
+.icon_Text .text p:nth-child(2) {
+    text-align: justify;
+}
+
+#photoGalleryCards img {
+    object-fit: cover;
+    object-position: center;
+}
+
+#aboutCenter {
+    background-color: var(--darkBlue);
+}
+
+#aboutCenter .title_Text {
+    color: white;
+}
+
+#aboutCenter #aboutCenterParagraph {
+    color: white;
+    text-align: justify;
+}
+
+
+#aboutSecImage {
+    border-radius: 0;
+}
+
+#routeMap {
+    background-color: var(--darkBlue);
+}
+
+#routeMap .title_Text {
+    color: white;
+}
+
+.routeCard {
+    height: 200px;
+    width: 580px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    transition-duration: 0.3s;
+    background-color: white;
+}
+
+.routeCard:hover {
+    transform: translateY(-10px);
+}
+
+.routeCard .routeImage {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.routeDescription .rdHeader .redHeaderImg {
+    display: none;
+}
+
+.routeCard .routeDescription {
+    width: 60%;
+    padding: 5px 10px;
+}
+
+.routeCard .routeDescription .stopType {
+    font-size: 14px;
+    margin-top: -10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.routeCard .routeDescription .routeDD {
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    width: 100%;
+    text-align: justify;
+}
+
+.sec {
+    background: url(images/secbad.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 40%;
+}
+
+.kcg {
+    background: url(images/kcg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 40%;
+}
+
+.jbs {
+    background: url(images/jbs.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40%;
+}
+
+.mgbs {
+    background: url(images/mgbsN.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40%;
+}
+
+.chatBotContainer {
+    height: fit-content;
+    width: 100px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.chatBotIcon {
+    height: 90px;
+    width: 90px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    transition-duration: 0.5s;
+}
+
+.chatBotIcon .img {
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+    filter: invert();
+    background: url(images/Icons/chatIcon.png);
+    background-size: contain;
+    background-position: center;
+    transition-duration: 0.3s;
+}
+
+.chatBotContentBox {
+    height: 450px;
+    width: 320px;
+    margin-right: 40px;
+    border-radius: 15px;
+    background-color: var(--lightBackground);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    overflow: hidden;
+    height: 0px;
+    width: 0px;
+}
+
+.openChatBox {
+    height: 450px;
+    width: 320px;
+}
+
+.closeIcon {
+    transform: rotate(180deg);
+}
+
+
+.chatBotContentBox .chatHeader {
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--lightBackground);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    justify-content: space-between;
+    border-bottom: 2px solid gray;
+}
+
+.chatBotContentBox .chatHeader img {
+    height: 40px;
+}
+
+.chatBotContentBox .chatHeader img:nth-child(3) {
+    filter: invert();
+    height: 35px;
+    cursor: pointer;
+}
+
+.chatBotContentBox .messagesContainer {
+    height: 355px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+
+.chatBotContentBox .messagesContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.chatBotContentBox .messagesContainer .messageItem {
+    background-color: #ddd;
+    width: 75%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 0px;
+    margin-left: 60px;
+}
+
+.chatBotContentBox .messagesContainer .senderImage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.chatBotContentBox .messagesContainer .senderImage .messageItem {
+    margin-left: 10px;
+    width: 77%;
+}
+
+.chatBotContentBox .messagesContainer .senderImage img {
+    height: 40px;
+    width: 40px;
+}
+
+.chatBotContentBox .messagesContainer .messageItem p {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.chatBotContentBox .messagesContainer .receiver {
+    width: 100%;
+    justify-content: flex-end;
+    padding-right: 10px;
+    align-items: center;
+}
+
+.chatBotContentBox .messagesContainer .messageOptions {
+    width: 95%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin: 0px auto;
+    transition-duration: 0.5s;
+}
+
+.chatBotContentBox .messagesContainer .messageOptions li {
+    border-radius: 10px;
+    border: 2px dashed var(--textSpanColor);
+    padding: 5px;
+    margin: 2px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.chatBotContentBox .messagesContainer .messageOptions li.half {
+    width: 48%;
+}
+
+.chatBotContentBox .messagesContainer .messageOptions li.full {
+    width: 100%;
+}
+
+.chatBotContentBox .chatFooter {
+    height: 45px;
+    width: 100%;
+    overflow: hidden;
+    color: var(--white);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid gray;
+}
+
+.chatBotContentBox .chatFooter input {
+    height: 50px;
+    width: 75%;
+    outline: none;
+    border: none;
+    padding-left: 15px;
+    background-color: var(--lightBackground);
+}
+
+.chatBotContentBox .chatFooter button {
+    height: 50px;
+    outline: none;
+    border: none;
+    background-color: var(--textSpanColor);
+    color: white;
+    width: 25%;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.msgAnimation {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    height: 35px;
+    align-items: center;
+}
+
+.msgAnimation .dots {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #333;
+    transition-duration: 0.1s;
+}
+
+.msgAnimation .dots:nth-child(1) {
+    animation: dots 1.5s infinite 0s;
+}
+
+.msgAnimation .dots:nth-child(2) {
+    animation: dots 1.5s infinite 0.25s;
+}
+
+.msgAnimation .dots:nth-child(3) {
+    animation: dots 1.5s infinite 0.5s;
+}
+
+.msgAnimation .dots:nth-child(4) {
+    animation: dots 1.5s infinite 0.75s;
+}
+
+@keyframes dots {
+    25% {
+        margin-top: -10px;
+    }
+
+    75% {
+        margin-top: 0px;
+    }
+
+    100% {
+        margin-top: 0px;
+    }
+}
+
+#messageResponseAnimation {
+    display: none;
+}
+
+
+footer {
+    background-color: var(--lightBlueShade);
+    background-color: #03061b;
+    padding: 10px;
+}
+
+footer p {
+    color: var(--white);
+    color: gray;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 2px 5px;
+
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-bottom: 2px solid rgba(255,255,255, 0.2);
+    padding-bottom: 50px;
+    color: white;
+    padding-top: 25px;
+}
+
+.footerContent .contactInfoFooter {
+    width: 30%;
+    border-right: dashed 2px rgba(255,255,255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerContent .siteMap {
+    width: 30%;
+    border-right: dashed 2px rgba(255,255,255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerContent .siteMap ul {
+    width: 100%;
+}
+
+.footerContent .siteMap ul li {
+    width: 100%;
+    text-align: center;
+}
+
+.footerContent .siteMap li a {
+    text-decoration: none;
+    color: gray;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.footerContent .siteMap li a:hover{
+    color: white;
+}
+
+.footerContent .subscribeInput {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerContent .subscribeInput .inputButton {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 45px;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.inputButton input {
+    border: none;
+    height: 100%;
+    width: 70%;
+    padding-left: 10px;
+    font-size: 1em;
+}
+
+.inputButton button {
+    margin: 0;
+    height: 100%;
+    width: 30%;
+    border: none;
+    background-color: var(--textSpanColor);
+    cursor: pointer;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    font-size: 1em;
+    color: #fff;
+    transition: 0.2s;
+    border-left: 2px solid black;
+}
+
+
+.footerContent .siteMap ul {
+    list-style-type: none;
+}
+
+.footerInfoHeads {
+    font-size: 22px;
+}
+
+.footerLabel {
+    display: flex;
+    float: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+    flex-wrap: wrap;
+}
+
+.footerImages {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3px;
+}
+
+.footerImages img {
+    height: 20px;
+}
+
+
+
+
+@media screen and (max-width:1024px) {
+    .menu_Toggle {
+        display: none;
+    }
+
+    header {
+        padding: 40px 20px;
+    }
+
+    .sticky {
+        padding: 10px 20px;
+    }
+
+    .searchList ul {
+        width: 40%;
+    }
+
+    .contact .contactContent {
+        width: 100%;
+    }
+
+
+    #overView,
+    #aboutCenter,
+    #photoGallery,
+    #routeMap {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #overView .col50 #centerName {
+        font-size: 1.6em;
+    }
+
+    #overView .col50 #centerAddress {
+        font-size: 14px;
+    }
+
+    #aboutCenter #aboutCenterParagraph {
+        font-size: 14px;
+    }
+
+    .icon_Text_Container {
+        padding-left: 10px;
+        margin-top: 20px;
+    }
+
+    .footerContent .subscribeInput .inputButton {
+        width: 100%;
+    }
+
+    .footerContent .subscribeInput .inputButton input {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    .sticky {
+        padding: 10px 20px;
+    }
+
+    header .navigation_Bar {
+        display: none;
+
+    }
+
+    .menu_Toggle {
+        display: block;
+    }
+
+    .sticky .menu_Toggle {
+        filter: invert(1);
+    }
+
+    .menu_Toggle.active {
+        background: url(images/Icons/closeIcon.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .navigation_Bar.active {
+        width: 100%;
+        height: calc(100% - 68px);
+        position: fixed;
+        top: 68px;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--lightBackground);
+    }
+
+    .navigation_Bar li {
+        margin: 0;
+    }
+
+    .sticky .navigation_Bar li a,
+    header .navigation_Bar li a {
+        text-decoration: none;
+        color: var(--black);
+        font-size: 1.6em;
+        font-weight: 500;
+    }
+
+    section {
+        padding: 20px;
+        padding-top: 60px;
+    }
+
+    .banner .content h2 {
+        font-size: 3.5em;
+    }
+
+    .about p {
+        font-size: 13px;
+    }
+
+    .about {
+        padding-bottom: 30px;
+    }
+
+    .cards_Container {
+        margin-top: 25px;
+    }
+
+    .contact .contact_Form .row_100 input,
+    .contact .contact_Form .row_100 textarea {
+        font-size: 16px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+
+    .row {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+
+    .row .col50 {
+        position: relative;
+        width: 48%;
+    }
+
+    .searchList ul {
+        width: 45%;
+    }
+
+    #overView {
+        padding-top: 80px;
+    }
+
+    #overView .row {
+        display: flex;
+        flex-direction: column;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+        margin-top: 0px;
+        width: 100%;
+    }
+
+    #overView .row .col50 {
+        width: 100%;
+    }
+
+    .nxtImg {
+        width: 100%;
+        border-radius: 0;
+    }
+
+
+    #aboutCenter .row {
+        flex-direction: column-reverse;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #aboutCenter .row .col50 {
+        width: 90%;
+
+    }
+
+    #search_Button a {
+        padding: 10px;
+    }
+
+    .overViewContent {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .icon_Text_Container {
+        padding-left: 10px;
+        margin-top: 0px;
+    }
+
+    .overViewContent .leftPart {
+        width: 100%;
+        height: 500px;
+    }
+
+    .overViewContent .rightPart {
+        width: 100%;
+    }
+
+    .footerContent .subscribeInput .inputButton button,
+    .footerContent .subscribeInput .inputButton input {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width:426px) {
+    .banner .content h2 {
+        font-size: 2.5em;
+    }
+
+    .banner .content p {
+        font-size: 12px;
+        margin-top: -5px;
+    }
+
+    .banner .content .search_Container {
+        width: 100%;
+        height: 50px;
+    }
+
+    .row {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-top: -10px;
+    }
+
+    .row .col50 {
+        width: 95%;
+        margin-top: 10px;
+    }
+
+    .row .col50 .img img {
+        height: 100%;
+    }
+
+    .row_100 {
+        flex-wrap: wrap;
+    }
+
+    .contact .contact_Form .row_100 .input50 {
+        width: 100%;
+    }
+
+    .searchList {
+        width: 100%;
+    }
+
+    .searchList ul {
+        width: 70%;
+    }
+
+    .searchList ul li {
+        padding: 5px 0px;
+    }
+
+
+    .searchList ul li span:nth-child(1) {
+        font-size: 18px;
+    }
+
+    .searchList ul li span:nth-child(2) {
+        font-size: 12px;
+    }
+
+    .contact .contactContent {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0px;
+    }
+
+    .contactFormPart {
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .contactInfoPart {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .msgCard {
+        width: 95%;
+    }
+
+    .overViewContent .leftPart {
+        height: 300px;
+    }
+
+    .overViewContent .rightPart {
+        margin-top: 5px;
+    }
+
+    .icon_Text_Container {
+        margin-top: 40px;
+        padding-left: 0px;
+    }
+
+    .overViewContent .rightPart h2 {
+        font-size: 20px;
+    }
+
+    .overViewContent .rightPart .icon_Text {
+        margin-top: -30px;
+    }
+
+    .icon_Text img {
+        height: 40px;
+        width: auto;
+    }
+
+    .icon_Text .text p {
+        font-size: 14px;
+    }
+
+    .extra_Margin_bottom {
+        margin-bottom: 20px;
+    }
+
+    .routeCard .routeImage {
+        display: none;
+    }
+
+    .routeCard .routeDescription {
+        width: 100%;
+    }
+
+    .routeCard .routeDescription h2 {
+        font-size: 26px;
+        letter-spacing: 2px;
+    }
+
+    .routeCard .routeDescription .stopType {
+        font-size: 14px;
+        margin-top: -8px;
+    }
+
+    .routeCard .routeDescription .routeDD {
+        font-size: 16px;
+
+    }
+
+    .routeDescription .rdHeader {
+        display: flex;
+        border-bottom: 2px solid gray;
+        justify-content: space-between;
+    }
+
+    .routeDescription .rdHeader .rdHeaderText {
+        width: auto;
+    }
+
+    .routeDescription .rdHeader .redHeaderImg {
+        display: block;
+        height: 50px;
+    }
+
+    #photoGallery .cards_Container img {
+        width: 100%;
+    }
+
+    #search_Button a {
+        padding: 10px;
+    }
+
+    .chatBotContainer {
+        bottom: 2%;
+        right: 2%;
+    }
+
+    .footerContent {
+        flex-wrap: wrap;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .footerContent .contactInfoFooter,
+    .footerContent .siteMap {
+        width: 50%;
+        border: none;
+    }
+
+    .footerContent .subscribeInput {
+        width: 100%;
+        margin-top: 10px;
+        padding-top: 5px;
+        border-top: 2px dashed rgba(0, 0, 0, 0.2);
+    }
+
+    .copyrightText {
+        text-align: center;
+    }
+    .footerImages{
+        width: 100%;
+        justify-content: center;
+    }
+
+
+}
+
+@media screen and (max-width:376px) {
+    #search_Button a {
+        padding: 10px;
+    }
+
+    .icon_Text_Container {
+        margin-top: 50px;
+        padding-left: 0px;
+    }
+
+    .chatBotIcon {
+        height: 75px;
+        width: 75px;
+    }
+
+    .chatBotIcon .img {
+        height: 70px;
+        width: 70px;
+    }
+
+    .chatBotContentBox {
+        width: 300px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width:321px) {
+    header {
+        padding: 5px 2px;
+    }
+
+    .icon_Text_Container {
+        margin-top: 60px;
+        padding-left: 0px;
+    }
+
+    .extra_Margin_bottom {
+        margin-bottom: 40px;
+    }
+}

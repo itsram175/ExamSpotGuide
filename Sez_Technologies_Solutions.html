@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sez Technologies & Solutions</title>
+    <style>
+        section {
+            padding: 100px;
+            padding-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+        i {
+            font-size: 20px;
+            color: black;
+
+        }
+
+        .img_Text {
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+            /* align-items: center; */
+        }
+
+        .img_Text img {
+            width: 35px;
+            height: 35px;
+        }
+
+        .img_Text span,
+        .img_Text a {
+            margin-left: 10px;
+            font-weight: 400;
+        }
+
+        .img_Text a {
+            color: blue;
+        }
+
+        .centerIMG {
+            align-items: center;
+        }
+
+        .cardImg {
+            
+            width: 400px;
+            height: 300px;
+            cursor: pointer;
+            transition: 0.2s;
+            border-radius: 10px;
+
+        }
+
+        .cardImg:hover {
+            transform: translateY(-10px);
+        }
+
+        .nxtImg {
+            height: 320px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        #overView,
+        #aboutCenter {
+            min-height: 100vh;
+            max-height: fit-content;
+        }
+
+        #photoGallery {
+            min-height: 100vh;
+            max-height: fit-content;
+        }
+
+        #mainSecImg {
+            background: url(images/SEZ_TECH/fullBD.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+
+        #aboutSecImage {
+            background: url(images/SEZ_TECH/interior2.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        @media screen and (max-width:376px) {
+            #routeMap .cards_Container .routeCard {
+                height: fit-content;
+            }
+        }
+
+        @media screen and (max-width:321px) {
+            .rdHeader .rdHeaderText h2 {
+                font-size: 19px;
+                letter-spacing: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="sticky">
+        <a href="index.html" target="_blank" class="logo">Exam<span>Spot</span>Guide</a>
+        <div class="menu_Toggle" onclick="toggleMenu()" id="menu_Toggle"></div>
+        <ul class="navigation_Bar" id="navigation_Bar">
+            <li><a href="#overView" onclick="navlinkClick(this)" id="navLink1">Over View</a></li>
+            <li><a href="#aboutCenter" onclick="navlinkClick(this)" id="navLink2">About Center</a></li>
+            <li><a href="#photoGallery" onclick="navlinkClick(this)" id="navLink3">Photo Gallery</a></li>
+            <li><a href="#routeMap" onclick="navlinkClick(this)" id="navLink4">Transport</a></li>
+        </ul>
+    </header>
+
+    <section id="overView">
+        <h2 class="title_Text"><span>O</span>ver <span>V</span>iew</h2>
+
+        <div class="overViewContent">
+            <div class="leftPart" id="mainSecImg">
+
+            </div>
+
+            <div class="rightPart">
+                <h2>SEZ TECHNOLOGIES & SOLUTIONS KARMANGHAT</h2>
+
+                <div class="icon_Text_Container">
+                    <div class="icon_Text extra_Margin_bottom">
+                        <img src="images/Icons/locationIcon.png" alt="">
+                        <div class="text">
+                            <p>FULL ADDRESS</p>
+                            <p>3rd Floor, Karmanghat, Plot.No.17-1-382/K/2/A, Champapet Rd, Vishnupuri Colony, Apsrtc
+                                Officers Colony, Champapet, Telangana - 500079</p>
+                        </div>
+                    </div>
+
+                    <div class="icon_Text">
+                        <img src="images/Icons/telephone.png" alt="">
+                        <div class="text">
+                            <p>CONTACT NUMBER</p>
+                            <p>7947105789</p>
+                        </div>
+                    </div>
+
+                    <div class="icon_Text">
+                        <img src="images/Icons/newBusStopIcon.png" alt="">
+                        <div class="text">
+                            <p>NEAREST BUS STOP</p>
+                            <p>Green Park Colony</p>
+                        </div>
+                    </div>
+
+                    <div class="icon_Text">
+                        <img src="images/Icons/gmapsIcon.png" alt="">
+                        <div class="text">
+                            <p>OPEN IN GOOGLE MAPS</p>
+                            <p><a href="https://maps.app.goo.gl/kGmYkBNdgvjcBFb6A" target="_blank"
+                                    rel="noopener noreferrer">Click Here</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="aboutCenter">
+        <h2 class="title_Text"><span>A</span>bout <span>C</span>enter</h2>
+        <div class="row">
+            <div class="col50">
+                <p id="aboutCenterParagraph">SEZ Technologies and Solutions is located at Karmanghat. It is a Computer
+                    based Test (CBT) Exam Centre. Many Competitive and Entrance Exams will be conducted here. The centre
+                    provides you the clock room facility to store your belongings safe. There is parking facility at the
+                    centre, but you need to arrive early to avail that facility. If you come late the parking space will
+                    be filled and they wont allow you to park your vehicle to park inside. And the exam centre will not
+                    provide any facilities for parents or guardians. The nearest city bus stop to this center is Green
+                    Park Colony bus Stop. After getting down at Green Park Colony Bus Stop, cross the road and walk in
+                    reverse direction for less than 100 meters. You can find the exam centre. You will find less buses
+                    to Green Park Colony from various important Bus Stations and Railway Stations of Hyderabad. So start
+                    early to reach the exam centre in correct Time. Scroll down to know the detailed bus route in simple
+                    words.</p>
+            </div>
+            <div class="col50">
+                <div class="nxtImg" id="aboutSecImage">
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="photoGallery">
+        <h2 class="title_Text"><span>P</span>hoto <span class="title_Text">G</span>allery</h2>
+
+        <div class="cards_Container" id="photoGalleryCards">
+            <img src="images/SEZ_TECH/interiorBest.png" alt="photoG1" class="cardImg">
+            <img src="images/SEZ_TECH/entrance.png" alt="photoG2" class="cardImg">
+            <img src="images/SEZ_TECH/interior3.png" alt="photoG3" class="cardImg">
+            <img src="images/SEZ_TECH/cctvMon.png" alt="photoG4" class="cardImg">
+            <img src="images/SEZ_TECH/interior4.png" alt="photoG5" class="cardImg">
+            <img src="images/SEZ_TECH/halfBD.png" alt="photoG6" class="cardImg">
+        </div>
+
+    </section>
+    <section id="routeMap">
+        <h2 class="title_Text"><span>H</span>ow to <span>R</span>each <span>F</span>rom?</h2>
+        <div class="cards_Container">
+            <div class="routeCard">
+                <div class="routeImage sec">
+
+                </div>
+                <div class="routeDescription">
+
+
+                    <div class="rdHeader">
+                        <div class="rdHeaderText">
+                            <h2>SECUNDERABAD</h2>
+                            <p class="stopType">Railways Station</p>
+                        </div>
+                        <img class="redHeaderImg" src="images/train1.png" alt="">
+                    </div>
+                    <p class="routeDD">If you are in Secunderabad Station, come out and walk to Rethifile Bus Stand.
+                        Take the bus with the Number <strong>1D, 1L or 1V</strong> and get down at Koti Womens College
+                        Bus Stop. Now Take <strong>104R or 277</strong> and get down at Green Park Colony.</p>
+                </div>
+            </div>
+
+            <div class="routeCard">
+                <div class="routeImage kcg">
+
+                </div>
+                <div class="routeDescription">
+
+
+                    <div class="rdHeader">
+                        <div class="rdHeaderText">
+                            <h2>KACHEGUDA</h2>
+                            <p class="stopType">Railways Station</p>
+                        </div>
+                        <img class="redHeaderImg" src="images/train1.png" alt="">
+                    </div>
+                    <p class="routeDD">If you are in Kacheguda Station, walk to the bus station which is opposite to the
+                        station. Take the bus with the Number <strong>3K or 3KN </strong>and get down at Koti Womens
+                        College Stop. From there take <strong>104R or 277</strong> and get down at Green Park Colony.
+                    </p>
+                </div>
+            </div>
+
+            <div class="routeCard">
+                <div class="routeImage mgbs">
+
+                </div>
+                <div class="routeDescription">
+                    <div class="rdHeader">
+                        <div class="rdHeaderText">
+                            <h2>MGBS</h2>
+                            <p class="stopType" id="MGBSText">MG Bus Station</p>
+                        </div>
+                        <img class="redHeaderImg" src="images/busIcon.png" alt="">
+                    </div>
+                    <p class="routeDD">If you are in MG Bus Station, walk to MGBS city bus stop which at Malakpet road,back side of the bus station.
+                        Take the bus with the Number <strong>72J or 72H </strong>and get off at Chaderghat. Then take <strong>104R or 277</strong> and get down at Green Park Colony.</p>
+                </div>
+            </div>
+
+            <div class="routeCard">
+                <div class="routeImage jbs">
+
+                </div>
+                <div class="routeDescription">
+
+                    <div class="rdHeader">
+                        <div class="rdHeaderText">
+                            <h2>JBS</h2>
+                            <p class="stopType">Jubliee Bus Station</p>
+                        </div>
+                        <img class="redHeaderImg" src="images/busIcon.png" alt="">
+                    </div>
+                    <p class="routeDD">If you are in Jubliee Bus Station, come out and take the bus with the Number
+                        <strong>90L, 279 or 290</strong> and get down near Rethifile Bus Stop. Now go to bus station and take <strong>1D or 1V</strong> and get down at Koti. Then from there take <strong>277 or 104R.</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footerContent">
+            <div class="contactInfoFooter">
+                <h3 class="footerInfoHeads">Contact Info</h3>
+                <p>12-1-1/C/32, Lalapet</p>
+                <p>Secunderabad - 500017</p>
+                <p>8367629464, 9154916500</p>
+
+            </div>
+            <div class="siteMap">
+                <h3 class="footerInfoHeads">Site Map</h3>
+                <ul>
+                    <li><a href="#banner">Home</a></li>
+                    <li><a href="/allCenters.html" target="_blank">Exam Centers</a></li>
+                    <li><a href="/about.html" target="_blank">About Us</a></li>
+                    <li><a href="/ourTeam.html" target="_blank">Our Team</a></li>
+                    <li><a href="/contactUs.html" target="_blank">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="subscribeInput">
+                <h3 class="footerInfoHeads">Subscribe</h3>
+                <p>We will send you the regular updates regarding our website</p>
+                <div class="inputButton">
+                    <input type="email" placeholder="enter your email address" id="emailIdFooter">
+                    <button onclick="subscribedAlert()">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footerLabel">
+            <p class="copyrightText">Copyright &copy 2024 Exam Spot Guide. All Rights Reserved.</p>
+            <div class="footerImages">
+                <a href="https://github.com/itsram175" target="_blank"><img src="images/Icons/githubWhite.png"
+                        alt="githubIcon"></a>
+                <a href="https://twitter.com/itsram175" target="_blank"><img src="images/twitter.png"
+                        alt="twitterIcon"></a>
+                <a href="https://www.instagram.com/itsram175" target="_blank"><img src="images/instagram.png"
+                        alt="instagramIcon"></a>
+                <a href="https://www.facebook.com/itsramteja.1" target="_blank"><img src="images/facebook.png"
+                        alt="facebookIcon"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        let navLink1 = document.querySelector("#navLink1");
+        let navLink2 = document.querySelector("#navLink2");
+        let navLink3 = document.querySelector("#navLink3");
+        let navLink4 = document.querySelector("#navLink4");
+
+        window.addEventListener('scroll', function () {
+            if (window.outerWidth > 780) {
+                inActiveLinks();
+                if (window.scrollY >= 0 && window.scrollY < 700) {
+                    navLink1.classList.add("activeLink");
+                } else if (window.scrollY > 700 && window.scrollY < 1400) {
+                    navLink2.classList.add("activeLink");
+                } else if (window.scrollY > 1400 && window.scrollY < 2220) {
+                    navLink3.classList.add("activeLink");
+                } else if (window.scrollY > 2220 && window.scrollY < 2750) {
+                    navLink4.classList.add("activeLink");
+                }
+            }
+        });
+
+        function toggleMenu() {
+            const menu_Toggle = document.querySelector(".menu_Toggle");
+            const navigation_Bar = document.querySelector(".navigation_Bar");
+            menu_Toggle.classList.toggle("active");
+            navigation_Bar.classList.toggle("active");
+        }
+
+        function navlinkClick(ref) {
+            inActiveLinks();
+            ref.classList.add("activeLink");
+            navigation_Bar.classList.remove("active");
+            menu_Toggle.classList.remove("active");
+        }
+
+        function inActiveLinks() {
+            navLink1.classList.remove("activeLink");
+            navLink2.classList.remove("activeLink");
+            navLink3.classList.remove("activeLink");
+            navLink4.classList.remove("activeLink");
+        }
+
+        navLink1.click();
+
+
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

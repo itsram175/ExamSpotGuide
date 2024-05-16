@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESG || About</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="sticky">
+        <a href="index.html" class="logo">Exam<span>Spot</span>Guide</a>
+        <div class="menu_Toggle" onclick="toggleMenu()" id="menu_Toggle"></div>
+        <ul class="navigation_Bar" id="navigation_Bar">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/allCenters.html">Exam Centers</a></li>
+            <li><a href="/about.html" class="activeLink">About Us</a></li>
+            <li><a href="/ourTeam.html">Our Team</a></li>
+            <li><a href="/contactUs.html">Contact Us</a></li>
+        </ul>
+    </header>
+    <section class="about" id="about">
+        <h2 class="title_Text"><span>A</span>bout us</h2>
+        <div class="row">
+            <div class="col50">
+                <p>At ExamSpotGuide, we understand the anxiety and stress of navigating your way to your Computer-Based
+                    Test (CBT) exam center, especially in a bustling city like Hyderabad. That's why we've dedicated
+                    ourselves to simplifying your journey. Through meticulous research and dedication, we've curated
+                    comprehensive guides that help you find the best routes from key bus stations to your exam
+                    destination. Whether you're a local or new to the city, our user-friendly platform provides clear
+                    directions and valuable insights, ensuring you arrive at your exam center feeling confident and
+                    prepared. Trust ExamSpotGuide to be your reliable companion on the path to success.</p>
+            </div>
+
+            <div class="col50">
+
+                <img src="images/teamwork.jpg" alt="">
+
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="footerContent">
+            <div class="contactInfoFooter">
+                <h3 class="footerInfoHeads">Contact Info</h3>
+                <p>12-1-1/C/32, Lalapet</p>
+                <p>Secunderabad - 500017</p>
+                <p>8367629464, 9154916500</p>
+
+            </div>
+            <div class="siteMap">
+                <h3 class="footerInfoHeads">Site Map</h3>
+                <ul>
+                    <li><a href="#banner">Home</a></li>
+                    <li><a href="/allCenters.html" target="_blank">Exam Centers</a></li>
+                    <li><a href="/about.html" target="_blank">About Us</a></li>
+                    <li><a href="/ourTeam.html" target="_blank">Our Team</a></li>
+                    <li><a href="/contactUs.html" target="_blank">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="subscribeInput">
+                <h3 class="footerInfoHeads">Subscribe</h3>
+                <p>We will send you the regular updates regarding our website</p>
+                <div class="inputButton">
+                    <input type="email" placeholder="enter your email address" id="emailIdFooter">
+                    <button onclick="subscribedAlert()">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footerLabel">
+            <p class="copyrightText">Copyright &copy 2024 Exam Spot Guide. All Rights Reserved.</p>
+            <div class="footerImages">
+                <a href="https://github.com/itsram175" target="_blank"><img src="images/Icons/githubWhite.png"
+                        alt="githubIcon"></a>
+                <a href="https://twitter.com/itsram175" target="_blank"><img src="images/twitter.png"
+                        alt="twitterIcon"></a>
+                <a href="https://www.instagram.com/itsram175" target="_blank"><img src="images/instagram.png"
+                        alt="instagramIcon"></a>
+                <a href="https://www.facebook.com/itsramteja.1" target="_blank"><img src="images/facebook.png"
+                        alt="facebookIcon"></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+
+        let navLink1 = document.querySelector("#navLink1");
+        let navLink2 = document.querySelector("#navLink2");
+        let navLink3 = document.querySelector("#navLink3");
+        let navLink4 = document.querySelector("#navLink4");
+        let navLink5 = document.querySelector("#navLink5");
+
+        let contactForm = document.querySelector("#contactForm");
+        let msgPopUp = document.querySelector("#msgPopUp");
+        let messageText = document.querySelector("#messageText");
+
+        // Contact Form Handles
+        let nameCF = document.querySelector("#nameCF");
+        let emailCF = document.querySelector("#emailCF");
+        let subjectCF = document.querySelector("#subjectCF");
+        let textAreaCF = document.querySelector("#textAreaCF");
+        let sendButton = document.querySelector("#sendButton");
+
+
+
+        let centersListCardsContainer = document.querySelector("#centersListCardsContainer");
+
+
+
+
+        function toggleMenu() {
+            const menu_Toggle = document.querySelector(".menu_Toggle");
+            const navigation_Bar = document.querySelector(".navigation_Bar");
+            menu_Toggle.classList.toggle("active");
+            navigation_Bar.classList.toggle("active");
+        }
+
+
+        function msgSent() {
+
+            if (nameCF.value == "" || emailCF.value == "" || subjectCF.value == "" || textAreaCF.value == "") {
+                sendButton.setAttribute("type", "submit");
+            } else if (emailCF.value.includes("@") == false) {
+                sendButton.setAttribute("type", "submit");
+            } else {
+                if (emailCF.value.includes("@")) {
+                    messageText.innerHTML = "Your Message Has been sent";
+                    msgPopUp.style.marginTop = "100px";
+                    sendButton.setAttribute("type", "button");
+                    contactForm.reset();
+                    setTimeout(() => {
+                        msgPopUp.style.marginTop = "-100px";
+                    }, 2500);
+                }
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

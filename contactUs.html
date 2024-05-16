@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESG || Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+
+<body>
+    <header class="sticky">
+        <a href="index.html" class="logo">Exam<span>Spot</span>Guide</a>
+        <div class="menu_Toggle" onclick="toggleMenu()" id="menu_Toggle"></div>
+        <ul class="navigation_Bar" id="navigation_Bar">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/allCenters.html">Exam Centers</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/ourTeam.html">Our Team</a></li>
+            <li><a href="/contactUs.html" class="activeLink">Contact Us</a></li>
+        </ul>
+    </header>
+    <section class="contact" id="contact">
+        <h2 class="title_Text white_Title"><span>C</span>ontact Us</h2>
+        <div class="contactContent">
+            <div class="contactFormPart">
+                <h2 class="CI_Text">Send us a Message</h2>
+                <div class="contact_Form">
+                    <form id="contactForm">
+                        <div class="row_100">
+                            <div class="input100">
+                                <input type="text" name="" id="nameCF" placeholder="Name" required>
+                            </div>
+
+                        </div>
+
+                        <div class="row_100">
+                            <div class="input100">
+                                <input type="email" name="" id="emailCF" placeholder="Email Address" required>
+                            </div>
+                        </div>
+
+                        <div class="row_100">
+                            <div class="input100">
+                                <input type="text" name="" id="subjectCF" placeholder="Subject" required>
+                            </div>
+                        </div>
+
+                        <div class="row_100">
+                            <div class="input100">
+                                <textarea placeholder="Message" id="textAreaCF" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row_100">
+                            <div class="input100">
+                                <button class="submitBtn" onclick="msgSent()" type="button"
+                                    id="sendButton">SEND</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="contactInfoPart">
+                <h2 class="CI_Text">Contact Information</h2>
+                <div class="contactInfoItem">
+                    <img src="images/Icons/map.png" alt="phone">
+                    <div>
+                        <h4>Location</h4>
+                        <p>12-1-1/C/31 Lalapet, North lalaguda, Secunderabad</p>
+                    </div>
+                </div>
+
+                <div class="contactInfoItem">
+                    <img src="images/phone.png" alt="phone">
+                    <div>
+                        <h4>Phone Number</h4>
+                        <p>8367629464</p>
+                    </div>
+                </div>
+
+                <div class="contactInfoItem">
+                    <img src="images/email.png" alt="phone">
+                    <div>
+                        <h4>E-mail Address</h4>
+                        <p>examspotguide@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="contactInfoSocialMediaIcons">
+                    <p>Follow Us On</p>
+                    <div>
+
+                        <a href="https://github.com/itsram175" target="_blank"><img src="images/github.png"
+                                alt="githubIcon"></a>
+                        <a href="https://twitter.com/itsram175" target="_blank"><img src="images/twitter.png"
+                                alt="twitterIcon"></a>
+                        <a href="https://www.instagram.com/itsram175" target="_blank"><img src="images/instagram.png"
+                                alt="instagramIcon"></a>
+                        <a href="https://www.facebook.com/itsramteja.1" target="_blank"><img src="images/facebook.png"
+                                alt="facebookIcon"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="footerContent">
+            <div class="contactInfoFooter">
+                <h3 class="footerInfoHeads">Contact Info</h3>
+                <p>12-1-1/C/32, Lalapet</p>
+                <p>Secunderabad - 500017</p>
+                <p>8367629464, 9154916500</p>
+
+            </div>
+            <div class="siteMap">
+                <h3 class="footerInfoHeads">Site Map</h3>
+                <ul>
+                    <li><a href="#banner">Home</a></li>
+                    <li><a href="/allCenters.html" target="_blank">Exam Centers</a></li>
+                    <li><a href="/about.html" target="_blank">About Us</a></li>
+                    <li><a href="/ourTeam.html" target="_blank">Our Team</a></li>
+                    <li><a href="/contactUs.html" target="_blank">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="subscribeInput">
+                <h3 class="footerInfoHeads">Subscribe</h3>
+                <p>We will send you the regular updates regarding our website</p>
+                <div class="inputButton">
+                    <input type="email" placeholder="enter your email address" id="emailIdFooter">
+                    <button onclick="subscribedAlert()">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footerLabel">
+            <p class="copyrightText">Copyright &copy 2024 Exam Spot Guide. All Rights Reserved.</p>
+            <div class="footerImages">
+                <a href="https://github.com/itsram175" target="_blank"><img src="images/Icons/githubWhite.png"
+                        alt="githubIcon"></a>
+                <a href="https://twitter.com/itsram175" target="_blank"><img src="images/twitter.png"
+                        alt="twitterIcon"></a>
+                <a href="https://www.instagram.com/itsram175" target="_blank"><img src="images/instagram.png"
+                        alt="instagramIcon"></a>
+                <a href="https://www.facebook.com/itsramteja.1" target="_blank"><img src="images/facebook.png"
+                        alt="facebookIcon"></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+
+
+
+        let contactForm = document.querySelector("#contactForm");
+        let msgPopUp = document.querySelector("#msgPopUp");
+        let messageText = document.querySelector("#messageText");
+
+        // Contact Form Handles
+        let nameCF = document.querySelector("#nameCF");
+        let emailCF = document.querySelector("#emailCF");
+        let subjectCF = document.querySelector("#subjectCF");
+        let textAreaCF = document.querySelector("#textAreaCF");
+        let sendButton = document.querySelector("#sendButton");
+
+
+
+        let centersListCardsContainer = document.querySelector("#centersListCardsContainer");
+
+
+
+
+        function toggleMenu() {
+            const menu_Toggle = document.querySelector(".menu_Toggle");
+            const navigation_Bar = document.querySelector(".navigation_Bar");
+            menu_Toggle.classList.toggle("active");
+            navigation_Bar.classList.toggle("active");
+        }
+
+
+
+        function msgSent() {
+
+            if (nameCF.value == "" || emailCF.value == "" || subjectCF.value == "" || textAreaCF.value == "") {
+                sendButton.setAttribute("type", "submit");
+            } else if (emailCF.value.includes("@") == false) {
+                sendButton.setAttribute("type", "submit");
+            } else {
+                if (emailCF.value.includes("@")) {
+                    messageText.innerHTML = "Your Message Has been sent";
+                    msgPopUp.style.marginTop = "100px";
+                    sendButton.setAttribute("type", "button");
+                    contactForm.reset();
+                    setTimeout(() => {
+                        msgPopUp.style.marginTop = "-100px";
+                    }, 2500);
+                }
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
