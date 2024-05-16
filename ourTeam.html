@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESG || Our Team</title>
     <link rel="stylesheet" href="style.css">
-   
+
 </head>
 
 <body>
@@ -104,6 +104,14 @@
         </div>
 
     </section>
+
+    <div class="messageSentPopUp" id="msgPopUp">
+
+        <div class="msgCard">
+            <h3 id="messageText">Your Message Has been sent</h3>
+        </div>
+
+    </div>
     <footer>
         <div class="footerContent">
             <div class="contactInfoFooter">
@@ -150,29 +158,7 @@
 
     <script>
 
-        let navLink1 = document.querySelector("#navLink1");
-        let navLink2 = document.querySelector("#navLink2");
-        let navLink3 = document.querySelector("#navLink3");
-        let navLink4 = document.querySelector("#navLink4");
-        let navLink5 = document.querySelector("#navLink5");
-
-        let contactForm = document.querySelector("#contactForm");
-        let msgPopUp = document.querySelector("#msgPopUp");
-        let messageText = document.querySelector("#messageText");
-
-        // Contact Form Handles
-        let nameCF = document.querySelector("#nameCF");
-        let emailCF = document.querySelector("#emailCF");
-        let subjectCF = document.querySelector("#subjectCF");
-        let textAreaCF = document.querySelector("#textAreaCF");
-        let sendButton = document.querySelector("#sendButton");
-
-
-
-        let centersListCardsContainer = document.querySelector("#centersListCardsContainer");
-
-
-
+       
         function toggleMenu() {
             const menu_Toggle = document.querySelector(".menu_Toggle");
             const navigation_Bar = document.querySelector(".navigation_Bar");
@@ -192,6 +178,7 @@
 
 
     </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
