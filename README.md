@@ -2,10 +2,10 @@
 This website provides the information about various Computer Based Test (CBT) Examination Centres across Hyderabad. As many Entrance exams and Competitive exams will be conducted in CBT mode, Many people from many villages of Telangana and neighbour states like Andhra Pradesh and Karnataka comes to Hyderabad for attending for those examinations. They will not have any proper guidance about how to reach the centre from Bus Station or Railway Stations of Hyderabad where they are alighted. They may faces some problems while searching their examination centres. To help them in such situations we have made this website.
 
 # Project Details
-1. Project Demo URL: https://mystoragevault.z13.web.core.windows.net/
-2. Demo Video URL: https://www.youtube.com/watch?v=duFw2sVCuuY&t=125s
-3. GitHub Repository URL: https://github.com/kbjtushar/victory-vault
-4. Industry: lifestyle - sports
+1. Project Demo URL: 
+2. Demo Video URL: 
+3. GitHub Repository URL: https://github.com/itsram175/examspotguide
+4. Industry: Travel - Education
    
 # Roles and responsibilities
 1. D Ram teja (Project management) : Manages the web development project.
@@ -74,4 +74,4 @@ Here I am attaching the final working website's screenshot for the reference.
 ![contact page](https://github.com/kbjtushar/victory-vault/assets/161484157/3ae8ede2-15e0-43d2-a1de-8235b50dcf6a)
 
 # Final Project Statement:
-Inspiring athletes to reach their full potential through state-of-the-art facilities, expert coaching, and comprehensive training programs. Join us to unlock your athletic excellence and become part of our thriving sports community.
+Our website helps the canditates who are appearing for various competative and entrance examinations in various CBT Examination centres across Hyderabad. We provide valuable information about CBT exam centres such as facilities provided by the exam centres, location of the exam centre, how to reach the exam from key Bus stations and Railways Station in Hyderabad.
