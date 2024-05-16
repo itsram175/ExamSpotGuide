@@ -65,6 +65,12 @@ let messageResponseAnimation = document.querySelector("#messageResponseAnimation
 
 let emailIdFooter = document.querySelector("#emailIdFooter");
 
+// Alert Pop Up Handles
+
+let msgPopUp = document.querySelector("#msgPopUp");
+let messageText = document.querySelector("#messageText");
+let msgCard = document.querySelector(".msgCard");
+
 let sentMessage;
 
 centerData.forEach(element => {
