@@ -3,15 +3,15 @@ This website provides the information about various Computer Based Test (CBT) Ex
 
 # Project Details
 1. Project Demo URL: https://esgstorageaccount123.z13.web.core.windows.net/
-2. Demo Video URL: 
+2. Demo Video URL: https://youtu.be/FfWw0bpEBI0
 3. GitHub Repository URL: https://github.com/itsram175/examspotguide
 4. Industry: Travel - Education
    
 # Roles and responsibilities
 1. D Ram teja (Project management) : Manages the web development project.
-2. Y Varshitha (Deployment) : Deployment and maintenance of project infrastructure.
-3. Durga Prasad (Images, logos and chat bot questions) : Responsible for image searching, logo creation and chat bot questions
-4. Vinod Kumar (Documentation) : Responsible for managing the documentation process.
+2. B Vinod Kumar (Deployment) : Deployment and maintenance of project infrastructure.
+3. CH Durga Prasad (Data and chat bot questions) : Responsible for gathering data required for website and chat bot questions.
+4. Y Varshitha (Images and Documentation) : Responsible for collecting Images required for website and managing the documentation process.
 # Azure services used:
 1. Azure blob storage
 2. Storage account
@@ -62,16 +62,35 @@ Here I am attaching the final working website's screenshot for the reference.
 ![home](https://itsram175.github.io/examspotguide/Screenshots/homePage.png)
 
 # Exam Centres
-![history](https://itsram175.github.io/examspotguide/Screenshots/examCentres.png)
+![Exam Centres](https://itsram175.github.io/examspotguide/Screenshots/examCentres.png)
 
 # About Us
-![facilities page](https://itsram175.github.io/examspotguide/Screenshots/aboutUs.png)
+![About Us](https://itsram175.github.io/examspotguide/Screenshots/aboutUs.png)
 
 # Our Team
-![sports page](https://itsram175.github.io/examspotguide/Screenshots/ourTeam.png)
+![Our Team](https://itsram175.github.io/examspotguide/Screenshots/ourTeam.png)
 
 # Contact Us
-![contact page](https://itsram175.github.io/examspotguide/Screenshots/contactUs.png)
+![contact Us](https://itsram175.github.io/examspotguide/Screenshots/contactUs.png)
+
+# Exam Centres
+![Exam Centres](https://itsram175.github.io/examspotguide/Screenshots/examCentres.png)
+
+# Exam Centre Overview
+![Overview](https://itsram175.github.io/examspotguide/Screenshots/examCentreInfo.png)
+
+# About Exam Centre
+![About Exam Centre](https://itsram175.github.io/examspotguide/Screenshots/aboutCenter.png)
+
+# Exam Centre Photo Gallery
+![Photo Gallery](https://itsram175.github.io/examspotguide/Screenshots/photoGallery.png)
+
+# Route Guide
+![Route Guide](https://itsram175.github.io/examspotguide/Screenshots/routeGuide.png)
+
+# Footer
+![contact page](https://itsram175.github.io/examspotguide/Screenshots/footer.png)
+
 
 # Final Project Statement:
 Our website helps the canditates who are appearing for various competative and entrance examinations in various CBT Examination centres across Hyderabad. We provide valuable information about CBT exam centres such as facilities provided by the exam centres, location of the exam centre, how to reach the exam from key Bus stations and Railways Station in Hyderabad.
